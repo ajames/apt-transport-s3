@@ -1,3 +1,9 @@
+apt-transport-s3 (1.3.0-1hvos0) hvos; urgency=medium
+
+  * Add support for alternate services with 'Endpoint'
+
+ -- Andrew James <ajames@digitalocean.com>  Mon, 11 Dec 2017 18:08:43 -0700
+
 apt-transport-s3 (1.3.0-1) unstable; urgency=medium
 
   * Added build-dep on dh-python and bumping up std-ver to 4.1.1
