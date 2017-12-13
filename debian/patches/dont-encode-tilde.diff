@@ -1,0 +1,17 @@
+--- a/s3
++++ b/s3
+@@ -215,12 +215,12 @@
+         if '.' in uri_parsed.netloc:
+             raise Exception("uri should not include fully qualified domain name for bucket")
+ 
+-        # quote path for +, ~, and spaces
++        # quote path for + and spaces
+         # see bugs.launchpad.net #1003633 and #1086997
+         scheme = 'https'
+         host = self.host
+         bucket = uri_parsed.netloc
+-        path = '/{}{}'.format(bucket, self._quote(uri_parsed.path, '+~ '))
++        path = '/{}{}'.format(bucket, self._quote(uri_parsed.path, '+ '))
+ 
+         s3url = urlparse.urlunparse(
+             (
